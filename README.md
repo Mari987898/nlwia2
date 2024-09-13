@@ -1,3 +1,4 @@
+![preview](./public/Página.png)
 ## ✨ Tecnologias relevantes
 
 A lista de tecnologias abaixo mostra um pouco do que foi abordado nesta semana de muito conteúdo da Trilha Mastery.
