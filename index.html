@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/Ia4.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=April+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <title>Shorts Summary</title>
+    <style>
+      /* Inclua aqui o CSS corrigido */
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <img src="/Ia4.png" alt="Logo" />
+      <h1>Shorts Summary</h1>
+      <form id="form">
+        <input type="url" id="url" placeholder="URL do vídeo" />
+        <button title="Resumir">
+          <i class="ph ph-play"></i>
+        </button>
+      </form>
+      <h2>Resumo</h2>
+      <p id="content" class="placeholder">Escolha um short para resumir</p>
+    </div>
+
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/ep0p6WoHA3A"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.getElementById("toggle")
+        const body = document.body
+
+        // Inicializa a classe com base no estado do checkbox
+        if (toggle && toggle.checked) {
+          body.classList.add("dark-mode")
+        } else {
+          body.classList.add("light-mode")
+        }
+
+        // Adiciona um ouvinte de eventos para alternar a classe quando o checkbox muda
+        if (toggle) {
+          toggle.addEventListener("change", function () {
+            if (this.checked) {
+              body.classList.remove("light-mode")
+              body.classList.add("dark-mode")
+            } else {
+              body.classList.remove("dark-mode")
+              body.classList.add("light-mode")
+            }
+          })
+        }
+      })
+    </script>
+
+    <script type="module" src="web/main.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </body>
+</html>
